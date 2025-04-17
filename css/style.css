@@ -9,6 +9,7 @@
 
 body {
     padding-top: 85px;
+    padding-top: 50px;
     min-height: 100vh;
     background: url('../img/fondo.jpg') no-repeat;
     background-size: cover;
@@ -89,6 +90,7 @@ body {
 
 .bg-verde-ecofood {
     background-color: #a7b28a;
+
     height: 500px;
 }
 
