@@ -1,0 +1,191 @@
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+}
+    
+.div1 {
+    grid-column: span 5 / span 5;
+}
+
+.div2 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+    background-color:rgba(167,178,138,255);
+}
+/* estructura dentro de div2*/
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+
+.tg td,
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    font-weight: normal;
+}
+
+.tg .tg-1692 {
+    border-color: inherit;
+    font-size: 32px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tg .tg-c3ow {
+    border-color: inherit;
+    text-align: center;
+    vertical-align: top;
+}
+
+.tg .tg-n2hl {
+    border-color: inherit;
+    font-family: "Arial Black", Gadget, sans-serif !important;
+    font-size: 100%;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 767px) {
+    .tg {
+    width: auto !important;
+    }
+    .tg col {
+    width: auto !important;
+    }
+    .tg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: auto 0;
+    }
+}
+
+
+.div3 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 4;
+    background-color: rgba(254,249,237,255);
+}
+
+.div4 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 6;
+    background-color:rgba(167,178,138,255);
+}
+
+.div5 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 8;
+    background-color: rgba(254,249,237,255);
+}
+
+
+
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* container de login*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+/* Bordered form */
+
+  /* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+  /* Set a style for all buttons */
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+  /* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+  /* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+  /* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+  /* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    width: 150px; /* Cambia el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+  /* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+  /* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+  /* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+    }
+    .cancelbtn {
+    width: 100%;
+    }
+    
+}
