@@ -4,9 +4,12 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(9, 1fr);
 }
-    
+
 .div1 {
     grid-column: span 5 / span 5;
+    background-color: rgba(254,249,237,255);
+    height: 0vh;
+    padding: 0px;
 }
 
 .div2 {
@@ -14,67 +17,58 @@
     grid-row: span 2 / span 2;
     grid-row-start: 2;
     background-color:rgba(167,178,138,255);
+    height: fit-content;
+    padding-top: 0px;
 }
-/* estructura dentro de div2*/
 
-.tg {
-    border-collapse: collapse;
-    border-spacing: 0;
+.seccion-info {
+    background-color: rgba(167, 178, 138, 1);
+    padding: 40px 20px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.tg td,
-.tg th {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    overflow: hidden;
-    padding: 10px 5px;
-    word-break: normal;
+.titulo-info {
+    color: #355723;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-.tg th {
-    font-weight: normal;
+.contenido-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.tg .tg-1692 {
-    border-color: inherit;
-    font-size: 32px;
+.descripcion-info {
+    color: #4C7A34;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 500px;
     text-align: left;
-    vertical-align: top;
 }
 
-.tg .tg-c3ow {
-    border-color: inherit;
-    text-align: center;
-    vertical-align: top;
+.icono-reciclaje img {
+    width: 142px;
+    height: 142px;
 }
 
-.tg .tg-n2hl {
-    border-color: inherit;
-    font-family: "Arial Black", Gadget, sans-serif !important;
-    font-size: 100%;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: underline;
-    vertical-align: top;
-}
-
-@media screen and (max-width: 767px) {
-    .tg {
-    width: auto !important;
-    }
-    .tg col {
-    width: auto !important;
-    }
-    .tg-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: auto 0;
-    }
+.boton-unete {
+    margin-top: 30px;
+    background-color: #29323D;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 1px solid #29323D;
+    border-radius: 21px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 
