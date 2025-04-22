@@ -5,6 +5,22 @@
     grid-template-rows: repeat(9, 1fr);
 }
 
+/* Separar los nav-items */
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Espaciado entre los elementos del menú */
+}
+
+/* Fondo del navbar */
+.navbar {
+    background-color: rgba(254,249,237,255); /* Color de fondo del navbar */
+}
+
+.logo-img {
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block; /* Asegura que se comporte como un bloque dentro del enlace */
+}
+
 .div1 {
     grid-column: span 5 / span 5;
     background-color: rgba(254,249,237,255);
@@ -95,13 +111,20 @@
 
 
 
-
+.button-container .btn,
 .button-container {
     display: flex;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
     gap: 10px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.button-container .btn:hover {
+    background-color: #333333; /* Fondo negro más claro al pasar el mouse */
 }
 
 
@@ -110,9 +133,20 @@
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
+.modal-lg {
+    max-width: 900px; /* Ajusta el ancho del modal */
+}
 
+.modal-body .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaciado entre columnas */
+}
 
-/* Bordered form */
+.modal-body label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
   /* Full-width inputs */
 input[type=text], input[type=password] {
@@ -163,7 +197,53 @@ img.avatar {
 
   /* Add padding to containers */
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los elementos */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
     padding: 16px;
+}
+
+.container label {
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaciado entre el label y el input */
+    display: flex;
+    align-items: center; /* Alinea el checkbox con el texto */
+    gap: 10px; /* Espaciado entre el checkbox y el texto */
+    font-size: 16px; /* Tamaño del texto */
+    color: #4a4a4a;
+}
+
+/* Estilo para los checkboxes */
+.container input[type="checkbox"] {
+    width: 18px; /* Ancho del checkbox */
+    height: 18px; /* Alto del checkbox */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+    accent-color: #355723; /* Cambia el color del checkbox */
+}
+
+/* Efecto hover en los labels */
+.container label:hover {
+    color: #355723; /* Cambia el color del texto al pasar el mouse */
+}
+
+.container input,
+.container select {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  border: 1px solid #ccc; /* Borde de los campos */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+margin-bottom: 15px;
+}
+
+/* Contenedor de la pregunta */
+.container p {
+    font-weight: bold;
+    color: #4a4a4a; /* Gris oscuro */
+    margin-bottom: 10px; /* Espaciado inferior */
 }
 
   /* The "Forgot password" text */

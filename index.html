@@ -19,16 +19,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse align-right" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Hidden brand</a>
+            <a class="navbar-brand" href="#">
+              <img src="./img/Recurso_19-removebg-preview.png" alt="Logo" class="logo-img">
+            </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">¿Que Hacemos?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active" href="#">Sobre Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">Disabled</a>
+                <a class="nav-link active"  href="#">Beneficios</a>
               </li>
             </ul>
             <div class="button-container">
@@ -124,7 +126,7 @@ Botón: Registrar
 
 <!-- Modal de register-->
 <div class="modal fade" id="ModalRegister" tabindex="-1" aria-labelledby="exampleModalRegister" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalRegister">¡Bienvenido!</h1>
@@ -132,31 +134,53 @@ Botón: Registrar
       </div>
       <div class="modal-body">
         <form action="action_page.php" method="post">
-          <div class="imgcontainer">
-            <img src="./img/icono_usuario.png" alt="Avatar" class="avatar">
-          </div>
-        
           <div class="container">
-            <label for="uname"><b>Usuario</b></label>
-            <input type="text" placeholder="Nombre De Usuario" name="uname" required>
+            <div class="row">
+              <!-- Primera columna -->
+              <div class="col-md-6">
+                <label for="uname"><b>Usuario</b></label>
+                <input type="text" placeholder="Nombre De Usuario" name="uname" required>
 
-            <label for="uname"><b>Usuario</b></label>
-            <input type="text" placeholder="Nombre De Usuario" name="uname" required>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Correo Electrónico" name="email" required>
 
+                <label for="date"><b>Fecha de Nacimiento</b></label>
+                <input type="date" name="FeNa" required>
+              </div>
 
-            <label for="psw2"><b>Contraseña</b></label>
-            <input type="password" placeholder="Ingresar Contraseña" name="psw2" required>
+              <!-- Segunda columna -->
+              <div class="col-md-6">
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingresar Contraseña" name="psw" required>
 
+                <label for="gender"><b>Género</b></label>
+                <select name="gender" id="gender" required>
+                  <option value="" disabled selected>Seleccionar</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="otro">Otro</option>
+                </select>
 
-            <button type="submit">Login</button>
-
-
-            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                <p><b>¿Cómo supiste de nosotros?</b></p>
+                <label for="sociales">
+                  <input type="checkbox" id="sociales" name="source" value="redes-sociales">
+                  Redes sociales
+                </label>
+                <label for="amistades">
+                  <input type="checkbox" id="amistades" name="source" value="amistades">
+                  Amistades
+                </label>
+                <label for="otros">
+                  <input type="checkbox" id="otros" name="source" value="otros-medios">
+                  Otros medios
+                </label>
+              </div>
+            </div>
           </div>
-        
-          <div class="container">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+
+          <div class="container mt-3">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="button" class="btn btn-secondary cancelbtn" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </form>
       </div>
