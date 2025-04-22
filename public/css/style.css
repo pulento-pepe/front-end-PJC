@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto auto auto auto auto auto auto auto; /* Ajusta las filas automáticamente */
-    gap: 8px; /* Mantén el espacio entre los elementos */
 }
     
 .div1 {
@@ -521,10 +520,10 @@ img.avatar {
 
 .container label {
     font-weight: bold;
-    margin-bottom: 10px; /* Espaciado entre el label y el input */
+    margin-bottom: 5px; /* Espaciado entre el label y el input */
     display: flex;
     align-items: center; /* Alinea el checkbox con el texto */
-    gap: 10px; /* Espaciado entre el checkbox y el texto */
+    gap: 20px; /* Espaciado entre el checkbox y el texto */
     font-size: 16px; /* Tamaño del texto */
     color: #4a4a4a;
 }
