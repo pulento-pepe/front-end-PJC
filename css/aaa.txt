@@ -1,0 +1,145 @@
+.parent {
+    display: flex;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    flex-direction: column; /* Cambia el flujo a vertical */
+    gap: 0;
+}
+
+
+.div1, .div2 {
+    width: 100%; /* Asegura que ocupen todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina relleno adicional */
+}
+/* Separar los nav-items */
+.navbar-nav .nav-item {
+    margin-right: 280px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Opcional: agrega negrita para mayor visibilidad */
+}
+
+.navbar-nav {
+    margin-left: 230px; /* Ajusta el valor para aumentar la separación */
+}
+
+/* Fondo del navbar */
+.navbar {
+    background-color: rgba(254,249,237,255); /* Color de fondo del navbar */
+}
+
+.logo-img {
+    width: 150px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block; /* Asegura que se comporte como un bloque dentro del enlace */
+}
+
+.div1 {
+    grid-column: span 5 / span 5;
+    background-color: rgba(254,249,237,255);
+    height: 0vh;
+    padding: 0px;
+}
+
+.div2 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+    background-color:rgba(167,178,138,255);
+    height: fit-content;
+    padding-top: 0px;
+}
+
+.seccion-info {
+    background-color: rgba(167, 178, 138, 1);
+    padding: 40px 20px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titulo-info {
+    color: #355723;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contenido-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.descripcion-info {
+    color: #4C7A34;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 500px;
+    text-align: left;
+}
+
+.icono-reciclaje img {
+    width: 142px;
+    height: 142px;
+}
+
+.boton-unete {
+    margin-top: 30px;
+    background-color: #29323D;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 1px solid #29323D;
+    border-radius: 21px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+.div3 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 4;
+    background-color: rgba(254,249,237,255);
+}
+
+.div4 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 6;
+    background-color:rgba(167,178,138,255);
+}
+
+.div5 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 8;
+    background-color: rgba(254,249,237,255);
+}
+
+
+
+.button-container .btn,
+.button-container {
+    display: flex;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    gap: 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.button-container .btn:hover {
+    background-color: #333333; /* Fondo negro más claro al pasar el mouse */
+}
