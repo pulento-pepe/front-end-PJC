@@ -162,34 +162,70 @@
 
 <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLogin" aria-hidden="true">
     <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLogin">¡Bienvenido!</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <form action="action_page.php" method="post">
-            <div class="imgcontainer">
-            <img src="./img/icono_usuario.png" alt="Avatar" class="avatar">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLogin">¡Bienvenido!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="container">
-            <label for="unameLog"><b>Usuario</b></label>
-            <input type="text" placeholder="Ingresar Usuario" name="unameLog" required>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="imgcontainer">
+                        <img src="./img/icono_usuario.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="container">
+                        <label for="unameLog"><b>Usuario</b></label>
+                        <input type="text" placeholder="Ingresar Usuario" id="unameLog" required>
 
-            <label for="pswLog"><b>Contraseña</b></label>
-            <input type="password" placeholder="Ingresar Contraseña" name="pswLog" required>
-            <button type="submit">Login</button>
+                        <label for="pswLog"><b>Contraseña</b></label>
+                        <input type="password" placeholder="Ingresar Contraseña" id="pswLog" required>
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="container">
+                        <button type="button" class="cancelbtn" data-bs-dismiss="modal">Cancelar</button>
+                        <span class="psw">¿Olvidaste tu <a href="#">contraseña?</a></span>
+                    </div>
+                </form>
             </div>
-            <div class="container">
-            <button type="button" class="cancelbtn">Cancelar</button>
-            <span class="psw">¿Olvidaste tu <a href="#">contraseña?</a></span>
-            </div>
-
-        </form>
         </div>
-    </div>
     </div>
 </div>
+
+<script>// Credenciales predefinidas
+    const validUser = "usuario";
+    const validPassword = "1234";
+    
+    // Capturar elementos
+    const loginForm = document.getElementById("loginForm");
+    const comentariosTextarea = document.querySelector(".comentarios");
+    const botonEnviarComentario = document.querySelector(".boton-enviar");
+    
+    // Manejar el evento de envío del formulario
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evitar recargar la página
+    
+        // Obtener valores ingresados
+        const username = document.getElementById("unameLog").value;
+        const password = document.getElementById("pswLog").value;
+    
+        // Validar credenciales
+        if (username === validUser && password === validPassword) {
+            alert("Inicio de sesión exitoso");
+    
+            // Habilitar la sección de comentarios
+            comentariosTextarea.disabled = false;
+            botonEnviarComentario.disabled = false;
+    
+            // Cerrar el modal (si estás usando Bootstrap)
+            const modal = bootstrap.Modal.getInstance(document.getElementById("ModalLogin"));
+            modal.hide();
+        } else {
+            alert("Usuario o contraseña incorrectos");
+        }
+    });
+    </script>
+
+
+
 
 
 
