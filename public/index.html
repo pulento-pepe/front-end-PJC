@@ -45,7 +45,21 @@
         </div>
         <div class="div2">
             <div class="seccion-info">
-                <h2 class="titulo-info">Transformamos las sobras en oportunidades</h2>
+                <h2 class="titulo-info" id="mensaje-div2"></h2>
+                <script>
+                    const mensajes = [
+                      "Transformamos las sobras en oportunidades",
+                      "De Sobras a Sabores",
+                      "Reutiliza, Redescubre, Saborea"
+                    ];
+                  
+                    function obtenerMensajeAleatorio() {
+                      const indiceAleatorio = Math.floor(Math.random() * mensajes.length);
+                      return mensajes[indiceAleatorio];
+                    }
+                  
+                    document.getElementById("mensaje-div2").textContent = obtenerMensajeAleatorio();
+                  </script>
                 <div class="contenido-info">
                     <p class="descripcion-info">
                         En EcoFoods, trabajamos para reducir el desperdicio de alimentos mediante la recolección de sobras de restaurantes, hoteles y supermercados. Nuestro objetivo es dar una segunda vida a estos productos, contribuyendo a la sostenibilidad y ayudando a comunidades que más lo necesitan. Unimos esfuerzos para transformar lo que sobra en recursos valiosos para todos.
