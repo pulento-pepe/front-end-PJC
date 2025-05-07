@@ -174,10 +174,10 @@
                     </div>
                     <div class="container">
                         <label for="unameLog"><b>Usuario</b></label>
-                        <input type="text" placeholder="Ingresar Usuario" id="unameLog" required>
+                        <input type="text" placeholder="Ingresar Usuario" id="unameLog" required minlength="5" maxlength="25">
 
                         <label for="pswLog"><b>Contraseña</b></label>
-                        <input type="password" placeholder="Ingresar Contraseña" id="pswLog" required>
+                        <input type="password" placeholder="Ingresar Contraseña" id="pswLog" required minlength="5" maxlength="25">
                         <button type="submit">Login</button>
                     </div>
                     <div class="container">
@@ -192,7 +192,7 @@
 
 <script>// Credenciales predefinidas
     const validUser = "usuario";
-    const validPassword = "1234";
+    const validPassword = "12345";
     
     // Capturar elementos
     const loginForm = document.getElementById("loginForm");
@@ -232,64 +232,116 @@
 <!-- Modal de register-->
 <div class="modal fade" id="ModalRegister" tabindex="-1" aria-labelledby="exampleModalRegister" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalRegister">¡Bienvenido!</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <form action="action_page.php" method="post">
-            <div class="container">
-            <div class="row">
-                <!-- Primera columna -->
-                <div class="col-md-6">
-                <label for="unameReg"><b>Usuario</b></label>
-                <input type="text" placeholder="Nombre De Usuario" name="unameReg" required>
-
-                <label for="email"><b>Email</b></label>
-                <input type="email" placeholder="Correo Electrónico" name="email" required>
-
-                <label for="date"><b>Fecha de Nacimiento</b></label>
-                <input type="date" name="FeNa" required>
-                </div>
-                <!-- Segunda columna -->
-                <div class="col-md-6">
-                <label for="pswReg"><b>Contraseña</b></label>
-                <input type="password" placeholder="Ingresar Contraseña" name="pswReg" required>
-
-                <label for="gender"><b>Género</b></label>
-                <select name="gender" id="gender" required>
-                    <option value="" disabled selected>Seleccionar</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="otro">Otro</option>
-                </select>
-                <p><b>¿Cómo supiste de nosotros?</b></p>
-                <label for="sociales">
-                    <input type="checkbox" id="sociales" name="source" value="redes-sociales">
-                    Redes sociales
-                </label>
-                <label for="amistades">
-                    <input type="checkbox" id="amistades" name="source" value="amistades">
-                    Amistades
-                </label>
-                <label for="otros">
-                    <input type="checkbox" id="otros" name="source" value="otros-medios">
-                    Otros medios
-                </label>
-                </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalRegister">¡Bienvenido!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            </div>
+            <div class="modal-body">
+                <form action="action_page.php" method="post" id="RegisterForm">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Primera columna -->
+                            <div class="col-md-6">
+                                <label for="unameReg"><b>Usuario</b></label>
+                                <input type="text" id="unameReg" placeholder="Nombre De Usuario" name="unameReg" required minlength="5" maxlength="25">
+                
+                                <label for="pswReg"><b>Contraseña</b></label>
+                                <input type="password" id="pswReg" placeholder="Ingresar Contraseña" name="pswReg" required minlength="5" maxlength="15">
+                
+                                <label for="date"><b>Fecha de Nacimiento</b></label>
+                                <input type="date" id="date" min="1900-01-01" max="2025-01-01" name="FeNa" required>
+                            </div>
+                            <!-- Segunda columna -->
+                            <div class="col-md-6">
+                                <label for="email"><b>Email</b></label>
+                                <input type="email" id="email" placeholder="Correo Electrónico" name="email" required minlength="5" maxlength="25">
 
-            <div class="container mt-3">
-              <button type="submit">Registrar</button>
-              <button type="button" class="cancelbtn">Cancelar</button>
-          </div>
-        </form>
-        </div>
-    </div>
-    </div>
-</div>
+                
+                                <label for="pswReg2"><b>Repetir Contraseña</b></label>
+                                <input type="password" id="pswReg2" placeholder="Repetir Contraseña" name="pswReg2" required minlength="5" maxlength="15">
+                
+                                <label for="gender"><b>Género</b></label>
+                                <select name="gender" id="gender" required>
+                                    <option value="" disabled selected>Seleccionar</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <p><b>¿Cómo supiste de nosotros?</b></p>
+                                <label for="sociales">
+                                    <input type="checkbox" id="sociales" name="source" value="redes-sociales">
+                                    Redes sociales
+                                </label>
+                                <label for="amistades">
+                                    <input type="checkbox" id="amistades" name="source" value="amistades">
+                                    Amistades
+                                </label>
+                                <label for="otros">
+                                    <input type="checkbox" id="otros" name="source" value="otros-medios">
+                                    Otros medios
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="container mt-3">
+                        <button type="submit">Registrar</button>
+                        <button type="button" class="cancelbtn">Cancelar</button>
+                    </div>
+                </form>
+                
+                <script>
+                    // Credenciales predefinidas
+                    const validRegUser = "usuario";
+                    const validRegPassword = "12345";
+                    const validEmail = "1234@gmail.com";
+                
+                    // Capturar elementos
+                    const RegisterForm = document.getElementById("RegisterForm");
+                
+                    // Manejar el evento de envío del formulario
+                    RegisterForm.addEventListener("submit", function (event) {
+                        // Evitar recargar la página
+                        event.preventDefault();
+                
+                        // Obtener valores ingresados
+                        const unameReg = document.getElementById("unameReg").value;
+                        const pswReg = document.getElementById("pswReg").value;
+                        const pswReg2 = document.getElementById("pswReg2").value;
+                        const email = document.getElementById("email").value;
+                
+                        // Validar que las contraseñas coincidan
+                        if (pswReg !== pswReg2) {
+                            alert("Las contraseñas no coinciden.");
+                            return;
+                        }
+                
+                        // Validar credenciales predefinidas
+                        if (unameReg === validRegUser && pswReg === validRegPassword && email === validEmail) {
+                            alert("Registro exitoso");
+                            comentariosTextarea.disabled = false;
+                            botonEnviarComentario.disabled = false;
+    
+                            // Cerrar el modal (si estás usando Bootstrap)
+                            const modal = bootstrap.Modal.getInstance(document.getElementById("ModalRegister"));
+                            modal.hide();
+                        } else {
+                            alert("Usuario, contraseña o email incorrectos.");
+                        }
+                    });
+                
+                    // Validación para asegurarse de que al menos un checkbox esté seleccionado
+                    document.querySelector('form').addEventListener('submit', function (event) {
+                        const checkboxes = document.querySelectorAll('input[name="source"]');
+                        const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+                
+                        if (!isChecked) {
+                            event.preventDefault(); // Evita el envío del formulario
+                            alert('Por favor, selecciona al menos una opción.');
+                        }
+                    });
+                </script>
     
 
 <script>
