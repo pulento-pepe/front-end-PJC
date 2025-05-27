@@ -99,30 +99,6 @@
     </div>
 
 
-    <div class="div3">
-        <div class="seccion-div3">
-            <h2 class="titulo-div3">¿Cómo funciona?</h2>
-            <div class="imagenes-con-linea">
-                <div class="imagen-con-texto">
-                    <img src="./img/personas.png" alt="Imagen 1">
-                    <p class="texto-mediano">recogemos</p>
-                    <p class="texto-pequeno">Todo el material que restaurants, supermercados y otros negocios desecharían.</p>
-                </div>
-                <div class="linea-vertical"></div>
-                <div class="imagen-con-texto">
-                    <img src="./img/alimento.png" alt="Imagen 2">
-                    <p class="texto-mediano">Preparamos</p>
-                    <p class="texto-pequeno">todo lo recogido, preparándolo de distintas maneras para desperdiciar la menor cantidad posible.</p>
-                </div>
-                <div class="linea-vertical"></div>
-                <div class="imagen-con-texto">
-                    <img src="./img/receptor.png" alt="Imagen 3">
-                    <p class="texto-mediano">entregamos</p>
-                    <p class="texto-pequeno">por una pequeña tarifa, o incluso de manera gratuita, distribuimos las preparaciones a quienes lo necesiten.</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="div4">
         <div class="seccion-div4">
             <h2 class="titulo-div4">¿Por que elegirnos?</h2>
@@ -142,22 +118,46 @@
             </div>
         </div>
     </div>
-    <div class="div5">
-        <div class="seccion-div5">
-            <h2 class="titulo-div5">Deja tus comentarios</h2>
-            <textarea class="comentarios" placeholder="Escribe aquí tus comentarios..." disabled></textarea>
-            <button class="boton-enviar" disabled>Enviar comentario</button>
-            <div class="ejemplos-comentarios">
-                <p class="comentario-ejemplo">"Este proyecto es increíble, me encanta la iniciativa."</p>
-                <p class="comentario-ejemplo">"Es una gran forma de ayudar al medio ambiente."</p>
-                <p class="comentario-ejemplo">"¡Gracias por hacer esto posible!"</p>
-                <p class="comentario-ejemplo">"Este proyecto es increíble, me encanta la iniciativa."</p>
-                <p class="comentario-ejemplo">"Es una gran forma de ayudar al medio ambiente."</p>
-                <p class="comentario-ejemplo">"¡Gracias por hacer esto posible!"</p>
-            </div>
-            <button class="boton-inicio">Volver al inicio</button>
+<div class="div5">
+    <div class="seccion-div5">
+        <h2 class="titulo-div5">Deja tus comentarios</h2>
+        <textarea class="comentarios" placeholder="Escribe aquí tus comentarios..." disabled></textarea>
+        <button class="boton-enviar" disabled>Enviar comentario</button>
+        <div class="ejemplos-comentarios">
+            <table class="table table-bordered mt-3" id="tabla-comentarios">
+                <thead>
+                    <tr>
+                        <th>Comentarios recientes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los comentarios del usuario aparecerán aquí -->
+                </tbody>
+            </table>
         </div>
+        <button class="boton-inicio">Volver al inicio</button>
     </div>
+</div>
+
+<script>
+    // Referencias a los elementos
+    const comentariosTextarea = document.querySelector(".comentarios");
+    const botonEnviarComentario = document.querySelector(".boton-enviar");
+    const tablaComentarios = document.getElementById("tabla-comentarios").querySelector("tbody");
+
+    // El login ya habilita los campos, así que solo agregamos la lógica de comentarios
+    botonEnviarComentario.addEventListener("click", function () {
+        const texto = comentariosTextarea.value.trim();
+        if (texto.length > 0) {
+            const fila = document.createElement("tr");
+            const celda = document.createElement("td");
+            celda.textContent = texto;
+            fila.appendChild(celda);
+            tablaComentarios.appendChild(fila);
+            comentariosTextarea.value = "";
+        }
+    });
+</script>
 </div>
 
 <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLogin" aria-hidden="true">
@@ -196,8 +196,6 @@
     
     // Capturar elementos
     const loginForm = document.getElementById("loginForm");
-    const comentariosTextarea = document.querySelector(".comentarios");
-    const botonEnviarComentario = document.querySelector(".boton-enviar");
     
     // Manejar el evento de envío del formulario
     loginForm.addEventListener("submit", function (event) {
@@ -218,6 +216,8 @@
             // Cerrar el modal (si estás usando Bootstrap)
             const modal = bootstrap.Modal.getInstance(document.getElementById("ModalLogin"));
             modal.hide();
+
+                window.location.href = "home.html"
         } else {
             alert("Usuario o contraseña incorrectos");
         }

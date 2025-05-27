@@ -323,7 +323,7 @@
 
 
 .div4 {
-    height: 500px;
+    height: 350px;
     grid-column: span 5 / span 5; /* Mismo ancho que el div2 */
     grid-row: span 2 / span 2; /* Mismo alto que el div2 */
     background-color: #a7b28a; /* Mismo fondo que el div2 */
