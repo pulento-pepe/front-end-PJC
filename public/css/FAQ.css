@@ -23,8 +23,14 @@ body {
     max-width: 90vw;            /* ancho responsive */
     margin:50px auto;          /* centrado horizontal con margen arriba y abajo */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave opcional */
-    background-color: #f8f9fa;  /* color de fondo claro */
+    background-color: #f8f9fa;/* color de fondo claro */
+    overflow: hidden;  
   }
+
+  .btn-container{
+    
+  }
+
 
   .box-title {
     font-size: 1.5rem;
